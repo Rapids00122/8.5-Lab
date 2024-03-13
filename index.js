@@ -6,7 +6,9 @@ let { data: books, error } = await supabase
   .from('books')
   .select('Title', 'Author', 'ISBN');
 
+console.log('Books:', books);
+
 for (let book of books) {
-    let bookList = document.getElementById('books');
-    bookList.innerHTML += `<tr><td>${book.Title}</td><td>${book.Author}</td><td>${book.ISBN}</td></tr>`;
+  let bookList = document.getElementById('books');
+  bookList.innerHTML += `<tr><td>${book.Title}</td><td>${book.Author}</td><td>${book.ISBN}</td></tr>`;
 }

@@ -4,7 +4,7 @@ const supabase = createClient('https://ruvhjkfigfqecvvlwrdp.supabase.co', 'eyJhb
 
 let { data: books, error } = await supabase
   .from('books')
-  .select('Title', 'Author', 'ISBN');
+  .select('*');
 
 console.log('Books:', books);
 
